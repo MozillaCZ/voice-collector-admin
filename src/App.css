@@ -1,0 +1,72 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Zilla Slab Highlight', sans-serif;
+}
+
+input {
+    font-family: 'Zilla Slab', sans-serif;
+    border: none;
+    font-size: 24px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+input.animateIn {
+    animation: animIn 0.1s;
+    animation-fill-mode: forwards;
+}
+
+input.animateOut {
+    animation: animOut 0.1s;
+}
+
+input:focus {
+    outline: none;
+}
+
+.buttons {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button-reject, .button-next {
+    font-size: 24px;
+    cursor: pointer;
+    margin: 10px 8px;
+}
+
+@keyframes animOut {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-150%, -50%);
+        opacity: 0;
+    }
+}
+
+@keyframes animIn {
+    0% {
+        transform: translate(50%, -50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
